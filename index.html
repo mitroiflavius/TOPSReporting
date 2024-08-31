@@ -4,14 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
+    <style>
+        /* Reset margins and paddings */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styling */
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            flex-shrink: 0; /* Ensures the header doesn't shrink */
+        }
+
+        /* Iframe should take up the remaining space */
+        iframe {
+            flex-grow: 1; /* Allows the iframe to grow and fill remaining space */
+            width: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Welcome to My Web Page!</h1>
-    <p>This page is served using Apache on a local server for fm pc.</p>
+    <h1>Welcome to TOPS Reporting!</h1>
 
     <!-- Embedded Power BI Report -->
-    <iframe title="test" width="600" height="373" src="https://app.powerbi.com/view?r=eyJrIjoiOWRlNGM3OTMtZDI2Yy00ZGVhLTkxMmQtNDc3MTgxNWQwNzA2IiwidCI6ImQxZGU1OGExLTEwMjctNGM3NC1hMWZkLTdkMGRkYWMyNjRmOSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe title="test" src="https://app.powerbi.com/view?r=eyJrIjoiOWRlNGM3OTMtZDI2Yy00ZGVhLTkxMmQtNDc3MTgxNWQwNzA2IiwidCI6ImQxZGU1OGExLTEwMjctNGM3NC1hMWZkLTdkMGRkYWMyNjRmOSIsImMiOjl9" allowFullScreen="true"></iframe>
 
 </body>
 </html>
